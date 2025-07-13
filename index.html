@@ -8,26 +8,41 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f7f1e6; /* soft off-white background from logo */
+      background-color: #f7f1e6;
       color: #1a1a1a;
     }
     header {
-      background-color: #0d223d; /* deep navy from logo */
-      color: #d6a849; /* gold from logo */
-      padding: 40px 20px;
-      text-align: center;
+      background-color: #f7f1e6;
+      padding: 0;
+      border-bottom: 1px solid #ddd;
     }
-    header img {
-      height: 100px;
-      margin-bottom: 20px;
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 30px;
+      background-color: #f7f1e6;
     }
-    header h1 {
+    .navbar img {
+      height: 60px;
+    }
+    .navbar h1 {
+      color: #0d223d;
+      font-size: 1.5rem;
       margin: 0;
-      font-size: 2rem;
+      font-weight: bold;
     }
-    header p {
+    .navbar span {
+      color: #d6a849;
+    }
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #f7f1e6;
+    }
+    .hero p {
       font-size: 1rem;
-      color: #f7f1e6;
+      color: #333;
     }
     section {
       padding: 60px 20px;
@@ -52,9 +67,13 @@
 </head>
 <body>
   <header>
-    <img src="master_vs.png" alt="Valiant Siana Logo" />
-    <h1>Valiant Siana Innovations Private Limited</h1>
-    <p>Building bold solutions across technology, mobility & lifestyle.</p>
+    <div class="navbar">
+      <img src="master_vs.png" alt="Valiant Siana Logo" />
+      <h1><span>Valiant</span> Siana</h1>
+    </div>
+    <div class="hero">
+      <p>Building bold solutions across technology, mobility & lifestyle.</p>
+    </div>
   </header>
 
   <section>
@@ -77,8 +96,7 @@
     <h2>Company Details</h2>
     <p><strong>Legal Name:</strong> Valiant Siana Innovations Private Limited</p>
     <p><strong>Incorporation:</strong> July 2025</p>
-
-    <p><strong>Directors:</strong> Siddhartha Akkimalli, Bhavana Yellamelli</p>
+    <p><strong>Directors:</strong> Siddharth Akkimalli, Bhavana Yellamelli</p>
   </section>
 
   <section>
