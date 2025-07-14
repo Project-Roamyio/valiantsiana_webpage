@@ -12,35 +12,53 @@
       color: #1a1a1a;
       scroll-behavior: smooth;
     }
+
     header {
       background-color: #f9f4e8; /* Pantone 7499 C */
-      padding: 30px 20px;
+      padding: 40px 20px 20px;
+      animation: fadeInDown 1s ease;
+    }
+
+    .header-container {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
       text-align: left;
     }
+
     header img {
       height: 80px;
     }
-    header .brand-text {
-      display: flex;
-      flex-direction: column;
-    }
-    header h1 {
+
+    .brand-text h1 {
       margin: 0;
-      font-size: 2rem;
+      font-size: 2.2rem;
       color: #0d223d;
+      transition: transform 0.3s ease, color 0.3s ease;
+      line-height: 1.4;
     }
-    header h1 span {
+
+    .brand-text h1 span {
       color: #d6a849;
     }
-    header p {
-      margin: 5px 0 0;
+
+    .brand-text h1:hover {
+      transform: scale(1.05);
+      color: #d6a849;
+    }
+
+    .brand-text p {
+      margin-top: 10px;
       font-size: 1rem;
       color: #0d223d;
+      font-weight: 400;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     nav {
@@ -52,6 +70,7 @@
       top: 0;
       z-index: 1000;
     }
+
     nav a {
       color: #f7f1e6;
       text-decoration: none;
@@ -59,14 +78,20 @@
       font-weight: bold;
       transition: color 0.3s;
     }
+
     nav a:hover {
       color: #d6a849;
+    }
+
+    .hero {
+      display: none;
     }
 
     section {
       padding: 60px 20px;
       max-width: 900px;
       margin: auto;
+      animation: fadeIn 1s ease-in-out;
       background-color: #ffffff;
     }
 
@@ -80,31 +105,33 @@
       text-align: center;
       font-size: 0.9rem;
       color: #f7f1e6;
+      animation: fadeInUp 1s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .highlight {
       color: #d6a849;
       font-weight: bold;
     }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      header .brand-text {
-        align-items: center;
-      }
-    }
   </style>
 </head>
 <body>
   <header>
-    <img src=master_vs_transparent.png" alt="Valiant Siana Logo" />
-    <div class="brand-text">
-      <h1><span>Valiant Siana</span> Innovations Private Limited</h1>
-      <p>Building bold solutions across technology, mobility & lifestyle.</p>
+    <div class="header-container">
+      <img src="master_vs_transparent.png" alt="Valiant Siana Logo" />
+      <div class="brand-text">
+        <h1><span>Valiant Siana</span> Innovations Private Limited</h1>
+        <p>Building bold solutions across technology, mobility & lifestyle.</p>
+      </div>
     </div>
   </header>
 
